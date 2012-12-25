@@ -1,0 +1,1 @@
+window.requestAnimFrame = (function(){})();
