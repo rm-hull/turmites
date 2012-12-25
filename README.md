@@ -14,7 +14,7 @@ from the list given here:
 
 * [langtons-ant](http://turmites.destructuring-bind.org?rule=langton-ant) (which has an implicit rule of 120080)
 
-* [spiral](http://turmites.destructuring-bind.org?rule=spiral) (which has an implicit rule of 111180121010)
+* [spiral](http://turmites.destructuring-bind.org?rule=spiral) (implicit rule: 111180121010)
 
 * [square](http://turmites.destructuring-bind.org?rule=square) (implicit rule: 180121020081)
 
@@ -42,13 +42,13 @@ should change to 1, turn left (8) and adopt state 1 before moving forwards.
 
 The direction to turn is specified by: 
 
-1. no turn
+* 1: no turn
 
-2. right
+* 2: right
 
-4. u-turn
+* 4: u-turn
 
-8. left
+* 8: left
 
 These values can be added together to perform different things:
 e.g. 10 = turn left *and* right (the turmite splits in two)
@@ -83,7 +83,7 @@ Notes
 -----
 Turmites are a generalization of [Langtons-ants](https://github.com/rm-hull/langtons-ants). 
 
-Inspired by Stephen Wolfram's, "A New Kind of Science", ISBN 1-57955-008-8
+Inspired (in part) by Stephen Wolfram's, "A New Kind of Science", ISBN 1-57955-008-8
 
 References
 ----------
