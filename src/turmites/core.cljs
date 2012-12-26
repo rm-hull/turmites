@@ -176,9 +176,10 @@
 (defn get-rule [query-string]
   (let [data (:rule (get-params query-string))
         rule (get predef-rules (keyword data) data)]
-    (if (nil? data)
-      (nth (vals predef-rules) (rand-int (count predef-rules)))
-      (parse-rules rule))))
+    (parse-rules 
+      (if (nil? data)
+        (nth (vals predef-rules) (rand-int (count predef-rules)))
+        rule))))
 
 (document-ready
   (fn []
