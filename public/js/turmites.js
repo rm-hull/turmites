@@ -5948,8 +5948,8 @@ Bj.b(document).ready(function() {
   b = a.get(0).getContext(Mh("2d"));
   var c = Te.a(function(a) {
     return od((a - a % 3) / 3)
-  }, bk()), e = T.c(c, 0, j), f = T.c(c, 1, j), h, c = (new fe("\ufdd0'rule")).call(j, Wj()), i = D.c(Nj, Ld.b(c), c);
-  h = c == j ? T.a(F(Te.a(kc, Nj)), ud(S(Nj))) : Tf(Te.a(Tf, rf.a(2, rf.a(3, Te.a(pd, F(i))))));
+  }, bk()), e = T.c(c, 0, j), f = T.c(c, 1, j), h, c = (new fe("\ufdd0'rule")).call(j, Wj()), i = D.c(Nj, Ld.b(c), c), c = c == j ? T.a(F(Te.a(kc, Nj)), ud(S(Nj))) : i;
+  h = Tf(Te.a(Tf, rf.a(2, rf.a(3, Te.a(pd, F(c))))));
   Gj.c(Gj.c(a, "\ufdd0'width", 2 + 3 * e), "\ufdd0'height", 2 + 3 * f);
   ck(dk(b, W([100, 60]), W([e, f]), h));
   return a.bind(Mh("\ufdd0'click"), function(a) {
