@@ -81,6 +81,10 @@ Turmites are a generalization of [Langtons-ants](https://github.com/rm-hull/lang
 
 Inspired (in part) by Stephen Wolfram's, "A New Kind of Science", ISBN 1-57955-008-8
 
+Chromium 22.0.1229.94 (on Ubuntu) does not yield the expected output, whereas
+Firefox 20.0a1 does. This might be down to Chromium's implementation of 
+_Canvas.getImageData()_. Chrome 23.x.xxxx.xx (on Windows 7) does work correctly.
+
 References
 ----------
 * http://www.maa.org/editorial/mathgames/mathgames_06_07_04.html
