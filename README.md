@@ -8,26 +8,25 @@ See http://turmites.destructuring-bind.org for a running example.
 By default one ant is automatically created; Extra ants may be added
 by clicking on the canvas.
 
-Rules may be specified by adding a `rules=...` parameter, values below. 
-If no rule is given, then a pre-defined one will be selected at random 
-from the list given here:
+Rules may be specified by adding a `rule=...` parameter, of which some 
+permissible values are shown below. 
 
-* [langtons-ant](http://turmites.destructuring-bind.org?rule=langton-ant) (which has an implicit rule of 120080)
+* [langtons-ant](http://turmites.destructuring-bind.org?rule=langtons-ant) (which has an implicit rule of 120080)
 
-* [spiral](http://turmites.destructuring-bind.org?rule=spiral) (implicit rule: 111180121010)
+* [coiled-rope](http://turmites.destructuring-bind.org?rule=coiled-rope) (implicit rule: 111180121010)
 
-* [square](http://turmites.destructuring-bind.org?rule=square) (implicit rule: 180121020081)
+* [computer-art](http://turmites.destructuring-bind.org?rule=computer-art) (implicit rule: 180121020081)
 
 * [fibonacci](http://turmites.destructuring-bind.org?rule=fibonacci) (implicit rule: 181181121010)
 
 * [worm-trails](http://turmites.destructuring-bind.org?rule=worm-trails) (implicit rule: 121181121020)
 
-* _more to follow_
-
+A full list of pre-defined rules can be found [here](https://github.com/rm-hull/turmites/blob/master/src/turmites/core.cljs#L20).
+If no rule is given, then a pre-defined one will be selected at random.
 Or, alternatively, the rule definitions may be specified as a sequence 
 of numeric digits.
 
-An _N_-state two-color rule consists of 2*_N_ triples, _abc_, where:
+An _N_-state two-color rule consists of _2N_ triples, _{a,b,c}_, where:
 
 * _a_: the new color of the square
 
@@ -36,9 +35,11 @@ An _N_-state two-color rule consists of 2*_N_ triples, _abc_, where:
 * _c_: the new internal state of the turmite
 
 For example, the fibonacci turmite, has rule definition _181181121010_ has 
-two states and two colors, and is split into four triples (1,8,1), (1,8,1),
-(1,2,1) and (0,1,0). The (1,8,1) triple therefore states that the colour 
-should change to 1, turn left (8) and adopt state 1 before moving forwards.
+two states and two colors, and is split into four triples {1,8,1}, {1,8,1},
+{1,2,1} and {0,1,0}. The particulat triple is selected based on the current
+state and the current color. The {1,8,1} triple therefore states that the 
+colour should change to 1, turn left (8) and adopt state 1 before moving 
+forwards.
 
 The direction to turn is specified by: 
 
@@ -49,11 +50,6 @@ The direction to turn is specified by:
 * 4: u-turn
 
 * 8: left
-
-These values can be added together to perform different things:
-e.g. 10 = turn left *and* right (the turmite splits in two)
-0 = die (the turmite vanishes)
-15 = turmites move off in all four directions
 
 Building and Running
 --------------------
@@ -93,4 +89,4 @@ References
 
 * http://demonstrations.wolfram.com/Turmites/
 
-* 
+* https://en.wikipedia.org/wiki/Turmite 
