@@ -55,6 +55,19 @@ The direction to turn is specified by:
 
 * 8: left
 
+The actions are specified by a state transition table listing the current 
+internal state of the turmite and the color of the cell it is currently 
+standing on. For example, the next rule-set to use for the fibonacci triples
+shown above are used by the following table:
+
+                              current-color = 0    current-color = 1
+    current-state = 0              1,8,1                1,8,1
+    current-state = 1              1,2,1                0,1,0
+    
+So if the current state is 1 and the current color is 0, then the {1,2,1} 
+triple is selected and the new color, direction and state are derived from
+that.
+
 Building and Running
 --------------------
 The app runs inside a static lightweight WEBrick instance (the app is
