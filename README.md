@@ -11,20 +11,22 @@ by clicking on the canvas.
 Rules may be specified by adding a `rule=...` parameter, of which some 
 permissible values are shown below. 
 
-* [langtons-ant](http://turmites.destructuring-bind.org?rule=langtons-ant) (which has an implicit rule of 120080)
+* [langtons-ant](http://turmites.destructuring-bind.org/?rule=langtons-ant) (which has an implicit rule of 120080)
 
-* [coiled-rope](http://turmites.destructuring-bind.org?rule=coiled-rope) (implicit rule: 111180121010)
+* [coiled-rope](http://turmites.destructuring-bind.org/?rule=coiled-rope) (implicit rule: 111180121010)
 
-* [computer-art](http://turmites.destructuring-bind.org?rule=computer-art) (implicit rule: 180121020081)
+* [computer-art](http://turmites.destructuring-bind.org/?rule=computer-art) (implicit rule: 180121020081)
 
-* [fibonacci](http://turmites.destructuring-bind.org?rule=fibonacci) (implicit rule: 181181121010)
+* [fibonacci](http://turmites.destructuring-bind.org/?rule=fibonacci) (implicit rule: 181181121010)
 
-* [worm-trails](http://turmites.destructuring-bind.org?rule=worm-trails) (implicit rule: 121181121020)
+* [worm-trails](http://turmites.destructuring-bind.org/?rule=worm-trails) (implicit rule: 121181121020)
+
+* [striped-spiral](http://turmites.destructuring-bind.org/?rule=striped-spiral) (implicit rule: 021080181020)
 
 A full list of pre-defined rules can be found [here](https://github.com/rm-hull/turmites/blob/master/src/turmites/core.cljs#L20).
 If no rule is given, then a pre-defined one will be selected at random.
 Or, alternatively, the rule definitions may be specified as a sequence 
-of numeric digits.
+of numeric digits, eg. http://turmites.destructuring-bind.org/?rule=021080181020
 
 An _N_-state two-color rule consists of _2N_ triples, _{a,b,c}_, where:
 
@@ -94,3 +96,9 @@ References
 * http://demonstrations.wolfram.com/Turmites/
 
 * https://en.wikipedia.org/wiki/Turmite 
+
+License
+-------
+Copyright (c) Richard Hull 2012
+
+Same as the eclipse public license - v 1.0: https://www.eclipse.org/legal/epl-v10.html
