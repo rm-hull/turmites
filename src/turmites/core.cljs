@@ -1,6 +1,7 @@
 (ns turmites.core
   (:use [monet.canvas :only [get-context get-pixel rect fill-style]]
-        [jayq.core :only [$ document-ready data attr hide bind]]
+        [monet.core :only [animation-frame]]
+        [jayq.core :only [$ document-ready data attr hide bind prevent]]
         [clojure.string :only [split]]))
 
 (def spinner ($ :div#spinner))
@@ -148,11 +149,9 @@
 
 (defn animate [turmite]
   (letfn [(loop []
-            (. js/window (requestAnimFrame loop))
+            (animation-frame loop)
             (reset! turmite (next-state @turmite))
-            (toggle-previous! @turmite)
-            ;(draw! @turmite "red")
-            )]
+            (toggle-previous! @turmite))]
     (.log js/console (pr-str @turmite))
     (loop)))
 
@@ -197,7 +196,7 @@
 
       (bind $canvas :click
         (fn [event]
-          (.preventDefault event)
+          (prevent event)
           (animate (create-turmite ctx (coords event cell-size) [width height] cell-size rule))))
       )))
 
