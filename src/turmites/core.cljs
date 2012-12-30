@@ -176,7 +176,7 @@
             (let [t @turmite]
               (reset! turmite (next-state t))
               (toggle-previous! t)
-              (draw! t "blue")))]
+              (draw! t "red")))]
     (log (pr-str @turmite))
     (loop)))
 
