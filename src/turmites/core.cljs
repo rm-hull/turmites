@@ -2,6 +2,7 @@
   (:use [monet.canvas :only [get-context get-pixel rect fill-style]]
         [monet.core :only [animation-frame]]
         [jayq.core :only [$ document-ready data attr hide bind prevent]]
+        [jayq.util :only [log]]
         [clojure.string :only [split]]))
 
 (def offsets 
@@ -150,7 +151,7 @@
             (animation-frame loop)
             (reset! turmite (next-state @turmite))
             (toggle-previous! @turmite))]
-    (.log js/console (pr-str @turmite))
+    (log (pr-str @turmite))
     (loop)))
 
 (defn create-turmite [ctx pos bounds cell-size rule]
@@ -181,7 +182,7 @@
 (document-ready
   (fn []
     (let [$canvas ($ :canvas#world) 
-          ctx (get-context (.get $canvas 0) "2d") 
+          ctx (get-context (aget $canvas 0) "2d") 
           cell-size 3
           [width height] (map #(quot % cell-size) (available-area))
           rule (get-rule (.-search (.-location js/window)))]
@@ -190,14 +191,9 @@
         (attr :width  (+ 2 (* cell-size width)))
         (attr :height (+ 2 (* cell-size height))))
 
-      (animate (create-turmite ctx [100 60] [width height] cell-size rule))
-
       (bind $canvas :click
         (fn [event]
           (prevent event)
           (animate (create-turmite ctx (coords event cell-size) [width height] cell-size rule))))
-      )))
-
-
-
-
+    
+      (animate (create-turmite ctx [100 60] [width height] cell-size rule)))))
