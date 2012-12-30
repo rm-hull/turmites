@@ -77,7 +77,7 @@ nominally deployed on Heroku), so Ruby and bundle are pre-requisites:
     $ bundle install
 
 The compiled javascript is already versioned in git, so start the 
-appserver and browse to http://localhost:9292
+appserver and browse to [http://localhost:9292](http://localhost:9292):
 
     $ rackup
 
