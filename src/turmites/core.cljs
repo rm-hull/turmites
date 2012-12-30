@@ -4,8 +4,6 @@
         [jayq.core :only [$ document-ready data attr hide bind prevent]]
         [clojure.string :only [split]]))
 
-(def spinner ($ :div#spinner))
-
 (def offsets 
   { :north [0 -1]
     :east  [1  0]
