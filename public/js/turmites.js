@@ -5997,7 +5997,7 @@ function hk(a) {
     h = (new ee("\ufdd0'previous")).call(j, b);
     i = vb.a(0, (new ee("\ufdd0'color")).call(j, b)) ? "black" : "white";
     F((new ee("\ufdd0'position")).call(j, h)) && ak((new ee("\ufdd0'ctx")).call(j, b), (new ee("\ufdd0'position")).call(j, h), (new ee("\ufdd0'cell-size")).call(j, b), i);
-    return ak((new ee("\ufdd0'ctx")).call(j, b), fk(b), (new ee("\ufdd0'cell-size")).call(j, b), "blue")
+    return ak((new ee("\ufdd0'ctx")).call(j, b), fk(b), (new ee("\ufdd0'cell-size")).call(j, b), "red")
   };
   Ji(S.e(M([Pa(a)], 0)));
   return b.r ? b.r() : b.call(j)
