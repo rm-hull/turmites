@@ -3,7 +3,7 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.5.0-RC1"]
-                 [jayq "1.0.0"]
+                 [jayq "2.0.0"]
                  [rm-hull/monet "0.1.3-SNAPSHOT"]]
   :cljsbuild {
     :builds [
