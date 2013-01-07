@@ -11,7 +11,7 @@
 ;; Licensed as per the eclipse public license - v 1.0: https://www.eclipse.org/legal/epl-v10.html
 ;;
 
-(ns turmites.core
+(ns turmites.client.core
   (:use [monet.canvas :only [get-context get-pixel rect fill-style]]
         [monet.core :only [animation-frame]]
         [jayq.core :only [$ document-ready data attr hide bind prevent]]

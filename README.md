@@ -70,21 +70,18 @@ that.
 
 Building and Running
 --------------------
-The app runs inside a static lightweight WEBrick instance (the app is
-nominally deployed on Heroku), so Ruby and bundle are pre-requisites:
+Invoke a noir instance using leiningen:
 
-    $ sudo apt-get install bundle
-    $ bundle install
+    $ lein run
 
-The compiled javascript is already versioned in git, so start the 
-appserver and browse to [http://localhost:9292](http://localhost:9292):
-
-    $ rackup
+The clojure script will compiled down to javascript as part of the build,
+so browse to [http://localhost:8080](http://localhost:8080)
 
 Editing Code
 ------------
 Don't try to edit the javascript - it is compiled from ClojureScript 
-in `src/ants/core.cljs` using Leiningen with the lein-cljsbuild plugin:
+in `src/turmites/client/core.cljs` using Leiningen with the lein-cljsbuild 
+plugin:
 
     $ lein cljsbuild clean
     $ lein cljsbuild auto
