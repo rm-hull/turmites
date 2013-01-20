@@ -99,7 +99,7 @@ Neither **Chromium 22.0.1229.94** nor **Google Chrome 23.0.1271.97** (on Ubuntu)
 yield the expected output, whereas **Firefox 20.0a1** does. This might be down to 
 any of the following
 
-* the linux flgrx graphics drivers, 
+* the linux fglrx graphics drivers, 
 
 * the chocolate factory's implementation of _Canvas.getImageData()_. 
 
