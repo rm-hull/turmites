@@ -25,7 +25,7 @@ permissible values are shown below.
 
 * [striped-spiral](http://turmites.destructuring-bind.org/?rule=striped-spiral) (implicit rule: 021080181020)
 
-A full list of pre-defined rules can be found [here](https://github.com/rm-hull/turmites/blob/master/src/turmites/core.cljs#L33).
+A full list of pre-defined rules can be found [here](https://github.com/rm-hull/turmites/blob/master/src/turmites/client/core.cljs#L33).
 If no rule is given, then a pre-defined one will be selected at random.
 Or, alternatively, the rule definitions may be specified as a sequence 
 of numeric digits, eg. http://turmites.destructuring-bind.org/?rule=021080181020
