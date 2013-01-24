@@ -22,7 +22,7 @@
      [:title "Turmites"]
      (include-css "/css/default.css")
      (include-css "/css/ribbon.css")
-     (include-js "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")]
+     (include-js "https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js")]
     [:body
      [:div#wrapper
       content]
