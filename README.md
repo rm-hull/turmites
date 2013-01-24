@@ -25,7 +25,7 @@ permissible values are shown below.
 
 * [striped-spiral](http://turmites.destructuring-bind.org/?rule=striped-spiral) (implicit rule: 021080181020)
 
-A full list of pre-defined rules can be found [here](https://github.com/rm-hull/turmites/blob/master/src/turmites/core.cljs#L33).
+A full list of pre-defined rules can be found [here](https://github.com/rm-hull/turmites/blob/master/src/turmites/client/core.cljs#L33).
 If no rule is given, then a pre-defined one will be selected at random.
 Or, alternatively, the rule definitions may be specified as a sequence 
 of numeric digits, eg. http://turmites.destructuring-bind.org/?rule=021080181020
@@ -99,7 +99,7 @@ Neither **Chromium 22.0.1229.94** nor **Google Chrome 23.0.1271.97** (on Ubuntu)
 yield the expected output, whereas **Firefox 20.0a1** does. This might be down to 
 any of the following
 
-* the linux flgrx graphics drivers, 
+* the linux fglrx graphics drivers, 
 
 * the chocolate factory's implementation of _Canvas.getImageData()_. 
 
