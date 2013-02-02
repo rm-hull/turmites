@@ -225,9 +225,9 @@
 (document-ready
   (fn []
     (let [$info   ($ :div#info)
-          $canvas ($ :canvas#world) 
+          $canvas ($ :canvas#world)
           ctx (get-context (aget $canvas 0) "2d") 
-          cell-size 3 
+          cell-size 3
           [width height] (map #(quot % cell-size) (available-area))
           rule (get-rule (.-search (.-location js/window)))]
       
