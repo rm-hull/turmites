@@ -14,7 +14,7 @@
 (ns turmites.client.core
   (:use [monet.canvas :only [get-context get-pixel rect fill-style]]
         [monet.core :only [animation-frame]]
-        [jayq.core :only [$ document-ready data attr hide bind prevent]]
+        [jayq.core :only [$ document-ready data text attr hide bind prevent]]
         [jayq.util :only [log]]
         [clojure.string :only [split]]))
 
@@ -146,7 +146,7 @@
 (defn next-triple [turmite]
   (let [state (get-in turmite [:current :state])
         color (color-mapper (get-color (:ctx turmite) (current-position turmite) (:cell-size turmite)))]
-    (get-in turmite [:rule state color])))
+    (get-in turmite [:rule :parsed state color])))
 
 (defn relative-direction [current nextdir]
   (get-in directions [current nextdir]))
@@ -208,12 +208,13 @@
    rule then that is used, otherwise an attempt is made to parse the
    value into a rule definition."
   [query-string]
-  (let [data (:rule (get-params query-string))
-        rule (get predef-rules (keyword data) data)]
-    (parse-rules 
-      (if (nil? data)
-        (nth (vals predef-rules) (rand-int (count predef-rules)))
-        rule))))
+  (let [input (:rule (get-params query-string))
+        label (if (nil? input)
+                (nth (keys predef-rules) (rand-int (count predef-rules)))
+                input)
+        rule (get predef-rules (keyword label) input)
+        ]
+    { :name (name label) :data rule :parsed (parse-rules rule) }))
 
 (defn available-area 
   "Calculates the maximum available screen size"
@@ -223,12 +224,15 @@
 
 (document-ready
   (fn []
-    (let [$canvas ($ :canvas#world) 
+    (let [$info   ($ :div#info)
+          $canvas ($ :canvas#world) 
           ctx (get-context (aget $canvas 0) "2d") 
-          cell-size 3
+          cell-size 3 
           [width height] (map #(quot % cell-size) (available-area))
           rule (get-rule (.-search (.-location js/window)))]
       
+      (text $info (str (:name rule) " (rule: " (:data rule) ")"))
+
       (-> $canvas
         (attr :width  (+ 2 (* cell-size width)))
         (attr :height (+ 2 (* cell-size height))))

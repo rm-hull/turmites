@@ -55,6 +55,17 @@ blockquote, q { quotes: "" ""; }
 a img { border: none; }
 
 div#wrapper {
-    margin: 5px;
     min-height: 98%;
 }
+
+div#info {
+    position: absolute;
+    display: block;
+    color: yellow;
+    font: bold 81.25% 'Helvetiva Neue', Helvetica, Arial, sans-serif;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0, 0.25);
+}
+
