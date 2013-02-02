@@ -2,7 +2,7 @@
   :url "http://turmites.destructuring-bind.org"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.5.0-RC2"]
+  :dependencies [[org.clojure/clojure "1.5.0-RC4"]
                  [noir "1.3.0"]
                  [jayq "2.0.0"]
                  [rm-hull/ring-gzip-middleware "0.1.4-SNAPSHOT"]
