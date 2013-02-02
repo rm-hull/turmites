@@ -6,3 +6,5 @@ pom.xml
 .lein-deps-sum
 .lein-cljsbuild-compiler-0/
 resources/public/cljs/
+hs_err_pid*.log
+.lein-repl-history
