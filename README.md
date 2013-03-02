@@ -6,9 +6,7 @@ a clock.
 
 See http://turmites.destructuring-bind.org for a running example.
 By default one ant is automatically created; Extra ants may be added
-by clicking on the canvas. **PLEASE NOTE:** _For some reason, neither
-Chromium v22 or Google Chrome v23 on Ubuntu 12.10 works properly when
-rendering to the HTML canvas._ 
+by clicking on the canvas. 
 
 Rules may be specified by adding a `rule=...` parameter, of which some 
 permissible values are shown below. 
@@ -94,20 +92,6 @@ Notes
 Turmites are a generalization of [Langtons-ants](https://github.com/rm-hull/langtons-ants). 
 
 Inspired (in part) by Stephen Wolfram's, "A New Kind of Science", ISBN 1-57955-008-8
-
-Neither **Chromium 22.0.1229.94** nor **Google Chrome 23.0.1271.97** (on Ubuntu) 
-yield the expected output, whereas **Firefox 20.0a1** does. This might be down to 
-any of the following
-
-* the linux fglrx graphics drivers, 
-
-* the chocolate factory's implementation of _Canvas.getImageData()_. 
-
-* something else
-
-I've seen similar problems on the Nexus 7 tablet too, but wouldn't like to hazard a guess
-exactly where the problem is... **Chrome 23.x.xxxx.xx** (on Windows 7) _does_ work correctly,
-as does **Safari** on OS X and iPad. 
 
 References
 ----------

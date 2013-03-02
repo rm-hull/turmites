@@ -12,7 +12,7 @@
 ;;
 
 (ns turmites.client.core
-  (:use [monet.canvas :only [get-context get-pixel rect fill-style]]
+  (:use [monet.canvas :only [get-context get-pixel rect fill-style save restore]]
         [monet.core :only [animation-frame]]
         [jayq.core :only [$ document-ready data text attr hide bind prevent]]
         [jayq.util :only [log]]
@@ -120,7 +120,7 @@
   (memoize
     (fn [color]
       (->> 
-        [:red :green :blue]
+        [:green :blue]
         (map color)
         (reduce +)
         zero?))))
@@ -135,7 +135,13 @@
       (set-color! (:ctx turmite) (:position prev) (:cell-size turmite) color))))
 
 (defn draw! [turmite color]
-  (set-color! (:ctx turmite) (current-position turmite) (:cell-size turmite) color))
+  (-> (:ctx turmite)
+    (save)
+    (set-color! 
+      (current-position turmite) 
+      (:cell-size turmite) 
+      color) 
+    (restore)))
 
 (defn wrap [[x y] [w h]]
   [(mod x w) (mod y h)])
