@@ -110,3 +110,5 @@ License
 Copyright (c) Richard Hull 2012
 
 Same as the eclipse public license - v 1.0: https://www.eclipse.org/legal/epl-v10.html
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rm-hull/turmites/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
